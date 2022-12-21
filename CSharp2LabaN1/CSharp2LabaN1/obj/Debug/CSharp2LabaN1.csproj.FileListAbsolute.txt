@@ -1,0 +1,8 @@
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\obj\Debug\CSharp2LabaN1.csproj.AssemblyReference.cache
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\obj\Debug\CSharp2LabaN1.csproj.SuggestedBindingRedirects.cache
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\obj\Debug\CSharp2LabaN1.csproj.CoreCompileInputs.cache
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\bin\Debug\CSharp2LabaN1.exe.config
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\bin\Debug\CSharp2LabaN1.exe
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\bin\Debug\CSharp2LabaN1.pdb
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\obj\Debug\CSharp2LabaN1.exe
+C:\Users\SPuDI\source\repos\CSharp2LabaN1\CSharp2LabaN1\obj\Debug\CSharp2LabaN1.pdb
