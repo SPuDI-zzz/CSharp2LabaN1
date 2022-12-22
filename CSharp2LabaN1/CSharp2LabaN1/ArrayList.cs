@@ -20,7 +20,7 @@ namespace CSharp2LabaN1
         { 
             get 
             {
-                return index < Count 
+                return index < Count && index >= 0 
                     ? _arrayList[index] 
                     : throw new ListIndexOutOfRangeException("Выход индекса за границу списка"); 
             }

@@ -45,7 +45,7 @@ namespace CSharp2LabaN1
                     return elem;
                 }
             }
-            return default;
+            return default(T);
         }
 
         public static T FindLast<T>(IList<T> list, CheckDelegate<T> checkDelegate)
@@ -57,7 +57,7 @@ namespace CSharp2LabaN1
                     return list[i];
                 }
             }
-            return default;
+            return default(T);
         }
 
         public static int FindIndex<T>(IList<T> list, CheckDelegate<T> checkDelegate)
@@ -123,10 +123,10 @@ namespace CSharp2LabaN1
             {
                 for (int j = i + 1; j < list.Count; j++)
                 {
-                    if (compareDelegate(list[i], list[j]) < 0)
+                    if (compareDelegate(list[i], list[j]) > 0)
                     {
                         T tempElem = list[i];
-                        list.RemoveAt(i);
+                        list.RemoveAt(i);//2 1 3
                         list.Insert(j, tempElem);
                     }
                 }

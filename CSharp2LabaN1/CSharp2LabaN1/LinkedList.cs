@@ -23,16 +23,13 @@ namespace CSharp2LabaN1
 
                 LinkedListNode<T> temp = head;
 
-                temp = getNodeByIndex(index, temp);
+                temp = GetNodeByIndex(index);
 
                 return temp.Value;
             } 
         }
 
-        public LinkedList() 
-        {
-            
-        }
+        public LinkedList() { }
 
         public int Add(T value)
         {
@@ -96,7 +93,7 @@ namespace CSharp2LabaN1
 
             cur = head;
 
-            cur = getNodeByIndex(index, cur);
+            cur = GetNodeByIndex(index);
 
             LinkedListNode<T> temp = new LinkedListNode<T>(value)
             {
@@ -120,14 +117,13 @@ namespace CSharp2LabaN1
         {
             if (IsEmpty()) return;
 
-            Count--;
-
             LinkedListNode<T> cur = head;
 
-            cur = getNodeByIndex(index, cur);
+            cur = GetParentByIndex(index);
 
             cur.Next = cur.Next.Next;
-            //temp.Next = null;
+
+            Count--;
         }
 
         public IList<T> subList(int fromIndex, int toIndex)
@@ -160,14 +156,20 @@ namespace CSharp2LabaN1
             return Count == 0;
         }
 
-        private LinkedListNode<T> getNodeByIndex(int index, LinkedListNode<T> node)
+        private LinkedListNode<T> GetNodeByIndex(int index)
         {
+            LinkedListNode<T> node = head;
             while (Count - 1 - index > 0)
             {
                 node = node.Next;
                 index++;
             }
             return node;
+        }
+
+        private LinkedListNode<T> GetParentByIndex(int index)
+        {
+            return GetNodeByIndex(index + 1);
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

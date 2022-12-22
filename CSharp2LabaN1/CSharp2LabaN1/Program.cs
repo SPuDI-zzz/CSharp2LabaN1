@@ -59,11 +59,34 @@ namespace CSharp2LabaN1
             list.Add(-1);
             list.Add(2);
             list.Add(3);
+            list.Add(6);
+            list.Add(1);
+            Console.WriteLine("Существует элемент > 0?");
             Console.WriteLine(ListUtils.Exists(list, elem => elem < 0));
+            Console.WriteLine("Вернуть первое значение > 2");
+            Console.WriteLine(ListUtils.Find(list, elem => elem > 2));
+            Console.WriteLine("Вернуть последние значение > 2");
+            Console.WriteLine(ListUtils.FindLast(list, elem => elem > 2));
+            Console.WriteLine("Вернуть первый индекс элемента со значение > 2");
+            Console.WriteLine(ListUtils.FindIndex(list, elem => elem > 2));
+            Console.WriteLine("Вернуть последний индекс элемента со значение > 2");
+            Console.WriteLine(ListUtils.FindLastIndex(list, elem => elem > 2));
+            Console.WriteLine("Увеличить все элементы списка в 2 раза");
             ListUtils.ForEach(list, elem => elem * 2);
             ListToConsole(list);
+            Console.WriteLine("Отсортировать список по возрастанию");
+            ListUtils.Sort(list, CompareInt);
+            ListToConsole(list);
+            Console.WriteLine("Все элементы > 0?");
             Console.WriteLine(ListUtils.CheckForAll(list, elem => elem > 0));
             Console.WriteLine();
+        }
+
+        private static int CompareInt(int firstValue, int secondValue)
+        {
+            if (firstValue > secondValue) return 1;
+            if (firstValue < secondValue) return -1;
+            return 0;
         }
 
         private static void TestArraylistUtils(IList<int> list)
